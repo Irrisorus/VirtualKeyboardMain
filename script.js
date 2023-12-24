@@ -192,17 +192,17 @@ let RusRowKeys=['Tab','Й','Ц','У','К','Е','Н','Г','Ш','Щ','З','Х','Ъ
 
 console.log(rows);
 
-
 let lang='eng';
-window.addEventListener('beforeunload', (event) => {
-    localStorage.setItem('curLang',lang);
-})
-
 lang=localStorage.getItem('curLang')
 if(lang=='eng'){
     fill(firstRowKeys,RowKeys);
 }
 else{fill(firstRowRusKeys,RusRowKeys);}
+
+
+
+
+
 
 
 let text_input=document.createElement('textarea');
@@ -213,7 +213,9 @@ let text_input=document.createElement('textarea');
 
 
 
-
+window.addEventListener('beforeunload', (event) => {
+    localStorage.setItem('curLang',lang);
+})
 
 
 
